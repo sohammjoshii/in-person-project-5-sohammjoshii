@@ -80,6 +80,9 @@ a:hover {
 
 /* Navigation Bar - TO BE ENHANCED WITH FLEXBOX */
 #navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     padding: var(--spacing-sm) var(--spacing-md);
     position: sticky;
@@ -548,6 +551,29 @@ a:hover {
 
     .section {
         padding: var(--spacing-lg) 0;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        transition: 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-menu li {
+        display: block;
+        margin: 1rem 0;
     }
 }
 
